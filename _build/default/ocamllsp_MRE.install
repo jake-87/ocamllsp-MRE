@@ -1,7 +1,25 @@
 lib: [
   "_build/install/default/lib/ocamllsp_MRE/META"
   "_build/install/default/lib/ocamllsp_MRE/dune-package"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.a"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cma"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cmi"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cmt"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cmx"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cmxa"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.ml"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One.cmi"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One.cmt"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One.cmx"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One__Onefile.cmi"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One__Onefile.cmt"
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE__One__Onefile.cmx"
+  "_build/install/default/lib/ocamllsp_MRE/one/one.ml" {"one/one.ml"}
+  "_build/install/default/lib/ocamllsp_MRE/one/onefile.ml" {"one/onefile.ml"}
   "_build/install/default/lib/ocamllsp_MRE/opam"
+]
+libexec: [
+  "_build/install/default/lib/ocamllsp_MRE/ocamllsp_MRE.cmxs"
 ]
 bin: [
   "_build/install/default/bin/ocamllsp_MRE"

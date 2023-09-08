@@ -1,0 +1,6 @@
+description = ""
+requires = ""
+archive(byte) = "ocamllsp_MRE.cma"
+archive(native) = "ocamllsp_MRE.cmxa"
+plugin(byte) = "ocamllsp_MRE.cma"
+plugin(native) = "ocamllsp_MRE.cmxs"

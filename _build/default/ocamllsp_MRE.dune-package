@@ -1,4 +1,56 @@
 (lang dune 3.10)
 (name ocamllsp_MRE)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (ocamllsp_MRE)))
+(sections (lib .) (libexec .) (bin ../../bin))
+(files
+ (lib
+  (META
+   dune-package
+   ocamllsp_MRE.a
+   ocamllsp_MRE.cma
+   ocamllsp_MRE.cmi
+   ocamllsp_MRE.cmt
+   ocamllsp_MRE.cmx
+   ocamllsp_MRE.cmxa
+   ocamllsp_MRE.ml
+   ocamllsp_MRE__One.cmi
+   ocamllsp_MRE__One.cmt
+   ocamllsp_MRE__One.cmx
+   ocamllsp_MRE__One__Onefile.cmi
+   ocamllsp_MRE__One__Onefile.cmt
+   ocamllsp_MRE__One__Onefile.cmx
+   one/one.ml
+   one/onefile.ml
+   opam))
+ (libexec (ocamllsp_MRE.cmxs))
+ (bin (ocamllsp_MRE)))
+(library
+ (name ocamllsp_MRE)
+ (kind normal)
+ (archives (byte ocamllsp_MRE.cma) (native ocamllsp_MRE.cmxa))
+ (plugins (byte ocamllsp_MRE.cma) (native ocamllsp_MRE.cmxs))
+ (native_archives ocamllsp_MRE.a)
+ (main_module_name Ocamllsp_MRE)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name ocamllsp_MRE)
+     (visibility public)
+     (kind alias)
+     (source (path Ocamllsp_MRE) (impl (path ocamllsp_MRE.ml-gen))))
+    (name Ocamllsp_MRE)
+    (modules
+     (group
+      (alias
+       (obj_name ocamllsp_MRE__One)
+       (visibility public)
+       (kind (alias (One)))
+       (source (path One One) (impl (path ocamllsp_MRE__One.ml-gen))))
+      (name One)
+      (modules
+       (module
+        (obj_name ocamllsp_MRE__One__Onefile)
+        (visibility public)
+        (source (path One Onefile) (impl (path one/onefile.ml))))))))
+   (wrapped true))))
