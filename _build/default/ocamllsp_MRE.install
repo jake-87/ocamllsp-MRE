@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/ocamllsp_MRE/META"
+  "_build/install/default/lib/ocamllsp_MRE/dune-package"
+  "_build/install/default/lib/ocamllsp_MRE/opam"
+]
+bin: [
+  "_build/install/default/bin/ocamllsp_MRE"
+]

@@ -1,0 +1,4 @@
+(lang dune 3.10)
+(name ocamllsp_MRE)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package opam)) (bin (ocamllsp_MRE)))
